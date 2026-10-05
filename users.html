@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users | CCDI EDU</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="users" data-role="admin">
+    <div id="toast" class="toast">
+    </div>
+    <section id="appPage" class="app-page">
+      <header class="app-topbar">
+        <button class="mobile-menu" onclick="toggleSidebar()">[menu]</button>
+        <a class="brand" href="dashboard-admin.html">
+        <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+        <div>
+          <strong>CCD<span class="brand-accent">i</span> EDU</strong>
+          <small>Computer Communication Development Institute</small>
+        </div>
+      </a>
+      <a class="btn btn-light" href="index.html">Logout</a>
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-role" id="sidebarRole">ADMIN / STAFF</div>
+      <button class="nav-item" data-page="dashboard" onclick="showPage('dashboard')">âŒ‚ <span>Home</span>
+    </button>
+    <button class="nav-item active" data-page="users" onclick="showPage('users')">â™™ <span>Users</span>
+  </button>
+  <button class="nav-item" data-page="academics-admin" onclick="showPage('academics-admin')">â–¤ <span>Academics</span>
+</button>
+<button class="nav-item" data-page="finance" onclick="showPage('finance')">â‚± <span>Finance</span>
+</button>
+<button class="nav-item" data-page="reports" onclick="showPage('reports')">â–¥ <span>Reports</span>
+</button>
+<button class="nav-item" data-page="profile" onclick="showPage('profile')">â— <span>Profile</span>
+</button>
+<button class="nav-item" data-page="settings" onclick="showPage('settings')">âš™ <span>Settings</span>
+</button>
+</aside>
+<main id="appContent" class="app-content">
+</main>
+</section>
+<div class="app-content static-page-content" id="usersTemplate">
+  <section class="page-title"><div><h1>Manage Users</h1><p>Manage student accounts and Professor privileges.</p></div><button class="btn btn-primary" onclick="inviteProfessor()">Invite Professor</button></section>
+  <div class="panel"><div class="search-row"><input placeholder="Search users..." oninput="filterUsers(this.value)"><select><option>All Users</option><option>Students</option><option>Professors</option><option>Administrators</option></select></div><div class="table-wrap"><table><thead><tr><th>Name</th><th>CCDI ID</th><th>Role</th><th>Status</th><th>Action</th></tr></thead><tbody id="userRows"></tbody></table></div></div>
+</div>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

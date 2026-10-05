@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Classes | CCDI EDU</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="classes" data-role="professor">
+    <div id="toast" class="toast">
+    </div>
+    <section id="appPage" class="app-page">
+      <header class="app-topbar">
+        <button class="mobile-menu" onclick="toggleSidebar()">[menu]</button>
+        <a class="brand" href="dashboard-professor.html">
+        <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+        <div>
+          <strong>CCD<span class="brand-accent">i</span> EDU</strong>
+          <small>Computer Communication Development Institute</small>
+        </div>
+      </a>
+      <a class="btn btn-light" href="index.html">Logout</a>
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-role" id="sidebarRole">PROFESSOR</div>
+      <button class="nav-item" data-page="dashboard" onclick="showPage('dashboard')">âŒ‚ <span>Home</span>
+    </button>
+    <button class="nav-item active" data-page="classes" onclick="showPage('classes')">â–¦ <span>My Classes</span>
+  </button>
+  <button class="nav-item" data-page="grades" onclick="showPage('grades')">âœ“ <span>Grades</span>
+</button>
+<button class="nav-item" data-page="schedule" onclick="showPage('schedule')">â–¤ <span>Schedule</span>
+</button>
+<button class="nav-item" data-page="profile" onclick="showPage('profile')">â— <span>Profile</span>
+</button>
+<button class="nav-item" data-page="settings" onclick="showPage('settings')">âš™ <span>Settings</span>
+</button>
+</aside>
+<main id="appContent" class="app-content">
+</main>
+</section>
+<div class="app-content static-page-content" id="classesTemplate">
+  <section class="page-title"><div><h1>My Classes</h1><p>Manage assigned classes and class content.</p></div></section>
+  <div class="stats-grid"><div class="stat-card"><div class="stat-icon">▤</div><div class="label">Assigned Classes</div><div class="value">4</div></div><div class="stat-card"><div class="stat-icon">♙</div><div class="label">Students</div><div class="value">156</div></div><div class="stat-card"><div class="stat-icon">✓</div><div class="label">Pending Grades</div><div class="value">12</div></div><div class="stat-card"><div class="stat-icon">▣</div><div class="label">Announcements</div><div class="value">2</div></div></div>
+  <div class="panel"><div class="panel-head"><h2>Assigned Classes</h2><button class="btn btn-primary" onclick="toast('Class content editor opened.')">Add Class Content</button></div><div class="table-wrap"><table><thead><tr><th>Class</th><th>Schedule</th><th>Students</th><th>Action</th></tr></thead><tbody><tr><td>IT Fundamentals</td><td>Mon 8:00 AM</td><td>42</td><td><button class="text-link">Manage →</button></td></tr><tr><td>Web Development</td><td>Mon 10:30 AM</td><td>38</td><td><button class="text-link">Manage →</button></td></tr><tr><td>Database Systems</td><td>Tue 1:30 PM</td><td>36</td><td><button class="text-link">Manage →</button></td></tr></tbody></table></div></div>
+</div>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

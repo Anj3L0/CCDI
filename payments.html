@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments | CCDI EDU</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="payments" data-role="student">
+    <div id="toast" class="toast">
+    </div>
+    <section id="appPage" class="app-page">
+      <header class="app-topbar">
+        <button class="mobile-menu" onclick="toggleSidebar()">[menu]</button>
+        <a class="brand" href="dashboard-student.html">
+        <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+        <div>
+          <strong>CCD<span class="brand-accent">i</span> EDU</strong>
+          <small>Computer Communication Development Institute</small>
+        </div>
+      </a>
+      <a class="btn btn-light" href="index.html">Logout</a>
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-role" id="sidebarRole">STUDENT</div>
+      <button class="nav-item" data-page="dashboard" onclick="showPage('dashboard')"> <span>Home</span>
+    </button>
+    <button class="nav-item" data-page="announcements" onclick="showPage('announcements')"> <span>Announcements</span>
+  </button>
+  <button class="nav-item" data-page="schedule" onclick="showPage('schedule')">â–¤ <span>Class Schedule</span>
+</button>
+<button class="nav-item" data-page="grades" onclick="showPage('grades')"> <span>Grades</span>
+</button>
+<button class="nav-item active" data-page="payments" onclick="showPage('payments')"> <span>Tuition</span>
+</button>
+<button class="nav-item" data-page="events" onclick="showPage('events')"> <span>Events</span>
+</button>
+<button class="nav-item" data-page="profile" onclick="showPage('profile')"> <span>Profile</span>
+</button>
+<button class="nav-item" data-page="settings" onclick="showPage('settings')"> <span>Settings</span>
+</button>
+</aside>
+<main id="appContent" class="app-content">
+</main>
+</section>
+<div class="app-content static-page-content" id="paymentsTemplate">
+  <section class="page-title"><div><h1>Tuition</h1><p>AY 2026-2027 · BS Information Technology · 1st Year, Block A</p></div></section>
+  <div class="payment-balance"><div class="payment-summary-grid"><div><div class="label">Total tuition</div><div class="amount" data-total-payment></div></div><div><div class="label">Already paid</div><div class="amount" data-paid-payment></div></div><div><div class="label">Remaining balance</div><div class="amount" data-remaining-payment></div></div></div></div>
+  <div class="panel payment-periods-panel"><div class="panel-head"><div><h2>Tuition schedule</h2><p class="muted">Installment due dates for each grading term.</p></div><span class="badge badge-info">AY 2026-2027</span></div><div id="paymentPeriods" class="payment-periods"></div><div class="payment-method-select"><label for="tuitionPaymentMethod">Payment method</label><select id="tuitionPaymentMethod"><option>GCash</option><option>Bank transfer</option><option>Card</option><option>Cashier</option></select><small class="muted">Demo only. No real payment is processed.</small></div></div>
+  <div class="dashboard-grid payment-lower-grid"><div class="panel"><div class="panel-head"><h2>Payment history</h2></div><div class="table-wrap"><table><thead><tr><th>Term</th><th>Date</th><th>Method</th><th>Amount</th><th>Receipt</th></tr></thead><tbody id="paymentHistory"></tbody></table></div></div><div class="panel"><div class="panel-head"><h2>Payment methods</h2></div><div class="payment-methods"><div class="payment-method"><strong>GCash</strong><small class="muted">E-wallet</small></div><div class="payment-method"><strong>Bank</strong><small class="muted">Bank transfer</small></div><div class="payment-method"><strong>Cashier</strong><small class="muted">Campus payment</small></div></div></div></div>
+  <div class="shop-link-panel panel"><div><span class="eyebrow">CCDI SHOP</span><h2>Need uniforms or a school ID?</h2><p class="muted">Open the separate shop page for sizes and pickup orders.</p></div><a class="btn btn-primary" href="shop.html">Open CCDI Shop</a></div>
+</div>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

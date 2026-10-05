@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades | CCDI EDU</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="grades" data-role="student">
+    <div id="toast" class="toast">
+    </div>
+    <section id="appPage" class="app-page">
+      <header class="app-topbar">
+        <button class="mobile-menu" onclick="toggleSidebar()">[menu]</button>
+        <a class="brand" href="dashboard-student.html">
+        <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+        <div>
+          <strong>CCD<span class="brand-accent">i</span> EDU</strong>
+          <small>Computer Communication Development Institute</small>
+        </div>
+      </a>
+      <a class="btn btn-light" href="index.html">Logout</a>
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-role" id="sidebarRole">STUDENT</div>
+      <button class="nav-item" data-page="dashboard" onclick="showPage('dashboard')">âŒ‚ <span>Home</span>
+    </button>
+    <button class="nav-item" data-page="announcements" onclick="showPage('announcements')">â–£ <span>Announcements</span>
+  </button>
+  <button class="nav-item" data-page="schedule" onclick="showPage('schedule')">â–¤ <span>Class Schedule</span>
+</button>
+<button class="nav-item active" data-page="grades" onclick="showPage('grades')">âœ“ <span>Grades</span>
+</button>
+<button class="nav-item" data-page="payments" onclick="showPage('payments')">â‚± <span>Tuition</span>
+</button>
+<button class="nav-item" data-page="events" onclick="showPage('events')">â—· <span>Events</span>
+</button>
+<button class="nav-item" data-page="profile" onclick="showPage('profile')">â— <span>Profile</span>
+</button>
+<button class="nav-item" data-page="settings" onclick="showPage('settings')">âš™ <span>Settings</span>
+</button>
+</aside>
+<main id="appContent" class="app-content">
+</main>
+</section>
+<div class="app-content static-page-content" id="gradesTemplate">
+  <section class="page-title"><div><h1>Academic Record</h1><p><span data-record-name>Rene Batterbonia</span> · <span data-record-course>BS Information Technology</span> · <span data-record-year>1st Year, Block A</span></p></div></section>
+  <div class="grade-toolbar"><div><strong>1st Semester</strong><span class="muted">AY 2026-2027</span></div><span id="studentGradeStatus" class="badge badge-info">Current record</span></div>
+  <div class="panel"><div class="panel-head"><h2>Subject grades</h2><span class="muted">Final rating uses the released term grades.</span></div><div class="table-wrap"><table><thead><tr><th>Subject Code</th><th>Subject Name</th><th>Instructor</th><th>Prelim</th><th>Midterm</th><th>Pre-final</th><th>Final</th><th>Final Rating</th><th>Remarks</th></tr></thead><tbody id="studentGradeRows"><tr><td>ITE 101</td><td>IT Fundamentals</td><td>Prof. Santos</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr><tr><td>ITE 102</td><td>Web Development</td><td>Prof. Reyes</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr><tr><td>ITE 103</td><td>Database Systems</td><td>Prof. Cruz</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr><tr><td>ITE 104</td><td>System Analysis &amp; Design</td><td>Prof. Santos</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr><tr><td>ITE 105</td><td>Computer Networks</td><td>Prof. Lim</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr><tr><td>ITE 106</td><td>Mobile App Development</td><td>Prof. Dela Cruz</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr></tbody></table></div></div>
+</div>
+<div class="app-content static-page-content hidden" id="professorGradesTemplate">
+  <section class="page-title"><div><h1>Grade Management</h1><p>Review and update grades for your assigned IT Fundamentals class.</p></div><div class="title-actions"><button class="btn btn-outline" onclick="publishGrades()">Publish Grades</button><button class="btn btn-primary" onclick="saveGrades()">Save Grades</button></div></section>
+  <div class="grade-toolbar"><div><strong>IT Fundamentals</strong><span class="muted">1st Semester, AY 2026-2027 · 42 students</span></div><span id="gradeStatus" class="badge badge-warning">Draft changes</span></div>
+  <div class="panel gradebook-panel"><div class="panel-head"><div><h2>Student Gradebook</h2><p class="muted">Enter grades from 1.00 (highest) to 5.00. Use 0.00 for incomplete records.</p></div><input class="grade-search" placeholder="Search students..." oninput="filterGradebook(this.value)"></div><div class="table-wrap"><table class="gradebook-table"><thead><tr><th>Student</th><th>CCDI ID</th><th>Prelim</th><th>Midterm</th><th>Pre-final</th><th>Final</th><th>Total Grade</th><th>Status</th></tr></thead><tbody id="gradebookRows"></tbody></table></div></div>
+  <div class="grade-note"><strong>Before publishing:</strong> review every entry carefully. Published grades become visible to students.</div>
+</div>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

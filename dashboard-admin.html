@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home | CCDI EDU</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="dashboard" data-role="admin">
+    <div id="toast" class="toast">
+    </div>
+    <section id="appPage" class="app-page">
+      <header class="app-topbar">
+        <button class="mobile-menu" onclick="toggleSidebar()">[menu]</button>
+        <a class="brand" href="index.html">
+        <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+        <div>
+          <strong>CCD<span class="brand-accent">i</span> EDU</strong>
+          <small>Computer Communication Development Institute</small>
+        </div>
+      </a>
+      <div class="top-actions">
+        <button class="icon-btn" title="Notifications" onclick="showPage('notifications')">🔔</button>
+        <div class="profile-menu">
+          <button class="profile-btn" onclick="toggleProfileMenu()">
+          <span class="avatar">AD</span>
+          <span>CCDI Admin</span>
+          <span>[profile]</span>
+        </button>
+        <div id="profileDropdown" class="dropdown">
+          <button onclick="showPage('profile')">My Profile</button>
+          <button onclick="showPage('settings')">Settings</button>
+          <a href="index.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-role" id="sidebarRole">ADMIN / STAFF</div>
+    <button class="nav-item active" data-page="dashboard" onclick="showPage('dashboard')">âŒ‚ <span>Home</span>
+  </button>
+  <button class="nav-item" data-page="announcements" onclick="showPage('announcements')">â–£ <span>Announcements</span>
+</button>
+<button class="nav-item" data-page="events" onclick="showPage('events')">â—· <span>Events</span>
+</button>
+<button class="nav-item" data-page="users" onclick="showPage('users')">â™™ <span>Users</span>
+</button>
+<button class="nav-item" data-page="academics-admin" onclick="showPage('academics-admin')">â–¤ <span>Academics</span>
+</button>
+<button class="nav-item" data-page="finance" onclick="showPage('finance')">â‚± <span>Finance</span>
+</button>
+<button class="nav-item" data-page="reports" onclick="showPage('reports')">â–¥ <span>Reports</span>
+</button>
+<button class="nav-item" data-page="profile" onclick="showPage('profile')">â— <span>Profile</span>
+</button>
+<button class="nav-item" data-page="settings" onclick="showPage('settings')">âš™ <span>Settings</span>
+</button>
+</aside>
+<main id="appContent" class="app-content">
+</main>
+</section>
+<!-- Admin-only dashboard content. JavaScript clones this into #appContent. -->
+<div class="app-content static-page-content" id="adminDashboardTemplate">
+  <section class="page-title">
+    <div><h1>Good day, Admin!</h1><p>Manage the school and its information.</p></div>
+  </section>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-icon">♙</div><div class="label">Total Users</div><div class="value">1,248</div></div>
+    <div class="stat-card"><div class="stat-icon">▣</div><div class="label">Announcements</div><div class="value">12</div></div>
+    <div class="stat-card"><div class="stat-icon">◷</div><div class="label">Events</div><div class="value">5</div></div>
+    <div class="stat-card"><div class="stat-icon">₱</div><div class="label">Pending Payments</div><div class="value">45</div></div>
+  </div>
+  <div class="dashboard-grid">
+    <div class="panel">
+      <div class="panel-head"><h2>Recent Activities</h2><button class="text-link" onclick="showPage('reports')">View Reports →</button></div>
+      <div class="list-item"><div class="list-icon">♙</div><div><strong>New student account registered</strong><small>September 24, 2026 • 10:24 AM</small></div></div>
+      <div class="list-item"><div class="list-icon">₱</div><div><strong>Payment received (₱ 2,500.00)</strong><small>September 24, 2026 • 10:12 AM</small></div></div>
+      <div class="list-item"><div class="list-icon">▣</div><div><strong>New announcement posted</strong><small>September 24, 2026 • 09:32 AM</small></div></div>
+      <div class="list-item"><div class="list-icon">◷</div><div><strong>Event created: Intramurals 2026</strong><small>September 23, 2026 • 02:15 PM</small></div></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>Quick Actions</h2></div>
+      <div class="quick-actions">
+        <button class="quick-btn" onclick="showPage('users')">♙ &nbsp; Manage Users</button>
+        <button class="quick-btn" onclick="showPage('announcements')">▣ &nbsp; Post Announcement</button>
+        <button class="quick-btn" onclick="showPage('events')">◷ &nbsp; Manage Events</button>
+        <button class="quick-btn" onclick="showPage('reports')">▥ &nbsp; View Reports</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

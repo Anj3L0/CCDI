@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | CCDI EDU</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="reports" data-role="admin">
+    <div id="toast" class="toast">
+    </div>
+    <section id="appPage" class="app-page">
+      <header class="app-topbar">
+        <button class="mobile-menu" onclick="toggleSidebar()">[menu]</button>
+        <a class="brand" href="dashboard-admin.html">
+        <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+        <div>
+          <strong>CCD<span class="brand-accent">i</span> EDU</strong>
+          <small>Computer Communication Development Institute</small>
+        </div>
+      </a>
+      <a class="btn btn-light" href="index.html">Logout</a>
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-role" id="sidebarRole">ADMIN / STAFF</div>
+      <button class="nav-item" data-page="dashboard" onclick="showPage('dashboard')">âŒ‚ <span>Home</span>
+    </button>
+    <button class="nav-item" data-page="users" onclick="showPage('users')">â™™ <span>Users</span>
+  </button>
+  <button class="nav-item" data-page="academics-admin" onclick="showPage('academics-admin')">â–¤ <span>Academics</span>
+</button>
+<button class="nav-item" data-page="finance" onclick="showPage('finance')">â‚± <span>Finance</span>
+</button>
+<button class="nav-item active" data-page="reports" onclick="showPage('reports')">â–¥ <span>Reports</span>
+</button>
+<button class="nav-item" data-page="profile" onclick="showPage('profile')">â— <span>Profile</span>
+</button>
+<button class="nav-item" data-page="settings" onclick="showPage('settings')">âš™ <span>Settings</span>
+</button>
+</aside>
+<main id="appContent" class="app-content">
+</main>
+</section>
+<div class="app-content static-page-content" id="reportsTemplate">
+  <section class="page-title"><div><h1>Reports</h1><p>View school information and system activity reports.</p></div><button class="btn btn-primary" onclick="exportUsersReport()">Export User CSV</button></section>
+  <div class="feature-grid"><div class="feature-card"><div class="feature-icon">♙</div><h3>User Report</h3><p>Account and role information.</p></div><div class="feature-card"><div class="feature-icon">₱</div><h3>Payment Report</h3><p>Payment transactions and status.</p></div><div class="feature-card"><div class="feature-icon">▣</div><h3>Announcement Report</h3><p>Published school announcements.</p></div><div class="feature-card"><div class="feature-icon">◷</div><h3>Event Report</h3><p>School activities and events.</p></div></div>
+</div>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

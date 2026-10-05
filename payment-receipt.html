@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuition Receipt | CCDI EDU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="payment-receipt" data-role="student">
+  <div id="toast" class="toast"></div>
+  <section id="appPage" class="app-page">
+    <header class="app-topbar"><button class="mobile-menu" onclick="toggleSidebar()" aria-label="Open navigation">☰</button><a class="brand" href="dashboard-student.html"><img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU"><div><strong>CCDI EDU</strong><small>Computer Communication Development Institute</small></div></a><a class="profile-btn student-avatar-link" href="profile.html" aria-label="Open profile"><span class="avatar">RB</span></a></header>
+    <aside id="sidebar" class="sidebar"><div class="sidebar-role">STUDENT</div><a class="nav-item" data-page="dashboard"><span>Home</span></a><a class="nav-item active" data-page="payments"><span>Tuition</span></a><a class="nav-item" data-page="announcements"><span>Announcements</span></a><a class="nav-item" data-page="events"><span>Events</span></a><a class="nav-item" data-page="grades"><span>Grades</span></a><a class="nav-item" data-page="schedule"><span>Class Schedule</span></a><a class="nav-item" data-page="shop"><span>CCDI Shop</span></a><a class="nav-item" data-page="settings"><span>Settings</span></a></aside>
+    <main class="app-content"><article class="panel printable-receipt" id="tuitionReceipt"></article><div class="receipt-actions"><button class="btn btn-primary" type="button" onclick="printReceipt()">Print Receipt</button></div></main>
+  </section>
+  <script src="script.js" defer></script>
+</body>
+</html>

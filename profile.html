@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | CCDI EDU</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="profile" data-role="student">
+    <div id="toast" class="toast">
+    </div>
+    <section id="appPage" class="app-page">
+      <header class="app-topbar">
+        <button class="mobile-menu" onclick="toggleSidebar()">[menu]</button>
+        <a class="brand" href="dashboard-student.html">
+        <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+        <div>
+          <strong>CCD<span class="brand-accent">i</span> EDU</strong>
+          <small>Computer Communication Development Institute</small>
+        </div>
+      </a>
+      <a class="btn btn-light" href="index.html">Logout</a>
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-role" id="sidebarRole">STUDENT</div>
+      <button class="nav-item" data-page="dashboard" onclick="showPage('dashboard')">âŒ‚ <span>Home</span>
+    </button>
+    <button class="nav-item" data-page="announcements" onclick="showPage('announcements')">â–£ <span>Announcements</span>
+  </button>
+  <button class="nav-item" data-page="schedule" onclick="showPage('schedule')">â–¤ <span>Class Schedule</span>
+</button>
+<button class="nav-item" data-page="grades" onclick="showPage('grades')">âœ“ <span>Grades</span>
+</button>
+<button class="nav-item" data-page="payments" onclick="showPage('payments')">â‚± <span>Tuition</span>
+</button>
+<button class="nav-item" data-page="events" onclick="showPage('events')">â—· <span>Events</span>
+</button>
+<button class="nav-item active" data-page="profile" onclick="showPage('profile')">â— <span>Profile</span>
+</button>
+<button class="nav-item" data-page="settings" onclick="showPage('settings')">âš™ <span>Settings</span>
+</button>
+</aside>
+<main id="appContent" class="app-content">
+</main>
+</section>
+<div class="app-content static-page-content" id="profileTemplate">
+  <section class="page-title"><div><span class="eyebrow">STUDENT ACCOUNT</span><h1>My Profile</h1><p>Personal, academic, and enrollment information.</p></div><a class="btn btn-outline" href="dashboard-student.html">Home</a></section>
+  <div class="profile-grid"><div class="panel profile-card" id="profileSummary"><div class="big-avatar">RB</div><h2 data-profile-name>Rene Batterbonia</h2><p class="muted">Student</p><span class="badge badge-info" style="margin-top:10px">CCDI-2026-0001</span><div class="profile-academic-summary"><strong>BS Information Technology</strong><span>1st Year · Block A</span><span>1st Semester · AY 2026-2027</span></div><button class="btn btn-outline" type="button" onclick="logout()">Log out</button></div><div class="profile-information"><div class="panel"><div class="panel-head"><h2>Personal Information</h2><button class="btn btn-primary" type="button" onclick="saveProfile()">Save Changes</button></div><div class="form-grid" id="profileFields"><div class="form-group"><label>Full Name</label><input value="Rene Batterbonia" data-profile-field="name"></div><div class="form-group"><label>CCDI ID Number</label><input value="CCDI-2026-0001" disabled></div><div class="form-group"><label>Sex</label><input value="Not provided" disabled></div><div class="form-group"><label>Email</label><input value="rene@example.com" data-profile-field="email"></div><div class="form-group"><label>Phone Number</label><input value="09XX XXX XXXX" data-profile-field="phone"></div><div class="form-group"><label>Previous School</label><input value="Not provided" disabled></div><div class="form-group"><label>Course or Strand</label><input value="BS Information Technology" disabled></div><div class="form-group"><label>Year and Block</label><input value="1st Year, Block A" disabled></div><div class="form-group"><label>Guardian</label><input value="Not provided" data-profile-field="guardian"></div><div class="form-group full-row"><label>Address</label><textarea data-profile-field="address">Not provided</textarea></div></div></div>
+  <section class="panel cor-panel"><div><span class="eyebrow">ENROLLMENT RECORD</span><h2>Certificate of Registration</h2><p class="muted">1st Semester, AY 2026-2027 · <span data-record-course>BS Information Technology</span> · <span data-record-year>1st Year, Block A</span></p><div class="table-wrap cor-preview"><table><thead><tr><th>Subject Code</th><th>Registered Subject</th><th>Instructor</th><th>Units</th></tr></thead><tbody id="corSubjectRows"><tr><td>ITE 101</td><td>IT Fundamentals</td><td>Prof. Santos</td><td>3</td></tr><tr><td>ITE 102</td><td>Web Development</td><td>Prof. Reyes</td><td>3</td></tr><tr><td>ITE 103</td><td>Database Systems</td><td>Prof. Cruz</td><td>3</td></tr></tbody></table></div></div><div class="cor-actions"><button class="btn btn-outline" type="button" onclick="downloadCor()">Download COR</button><button class="btn btn-primary" type="button" onclick="window.print()">Print / Save PDF</button></div></section></div></div>
+</div>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Home | CCDI EDU</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="dashboard" data-role="student">
+    <div id="toast" class="toast">
+    </div>
+    <section id="appPage" class="app-page">
+      <header class="app-topbar">
+        <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false" onclick="toggleSidebar()">☰</button>
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+          <div>
+            <strong>CCD<span class="brand-accent">i</span> EDU</strong>
+            <small>Computer Communication Development Institute</small>
+          </div>
+        </a>
+        <div class="top-actions">
+          <button class="icon-btn" title="Notifications" onclick="showPage('notifications')">🔔</button>
+          <div class="profile-menu">
+            <a class="profile-btn" href="profile.html" aria-label="Open profile">
+              <span class="avatar">RB</span>
+              <span id="topUserName">Rene Batterbonia</span>
+            </a>
+          </div>
+        </div>
+      </header>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-role" id="sidebarRole">STUDENT</div>
+      <button class="nav-item active" data-page="dashboard" data-section="homeSection"><span>Home</span></button>
+      <button class="nav-item" data-page="payments" data-section="studentTuition"><span>Tuition</span></button>
+      <button class="nav-item" data-page="grades" data-section="studentGrades"><span>Grades</span></button>
+      <button class="nav-item" data-page="schedule" data-section="studentSchedule"><span>Class Schedule</span></button>
+      <button class="nav-item" data-page="announcements" data-section="studentAnnouncements"><span>Announcements</span></button>
+      <button class="nav-item" data-page="events" data-section="studentEvents"><span>Events</span></button>
+      <button class="nav-item" data-page="shop" data-section="studentShop"><span>CCDI Shop</span></button>
+      <button class="nav-item" data-page="settings"><span>Settings</span></button>
+    </aside>
+
+    <main id="appContent" class="app-content"></main>
+  </section>
+
+<!-- The page layout stays in HTML; JavaScript only fills live values. -->
+<div class="app-content static-page-content" id="studentDashboardTemplate">
+  <section class="portal-welcome" id="homeSection">
+    <div>
+      <span class="eyebrow">CCDI CAMPUS PORTAL · STUDENT HOME</span>
+      <h1>Good morning, <span data-student-name>Rene</span></h1>
+      <p>Your academic day, school services, and important updates in one place.</p>
+    </div>
+    <div class="welcome-date">
+      <span>WEDNESDAY</span>
+      <strong>7</strong>
+      <small>OCTOBER 2026</small>
+    </div>
+  </section>
+
+  <div class="stats-grid portal-stats" aria-label="Student updates">
+    <div class="stat-card"><div class="stat-icon">▣</div><div class="label">Announcements</div><div class="value">6 current updates</div></div>
+    <div class="stat-card"><div class="stat-icon">◷</div><div class="label">Upcoming Events</div><div class="value">5 scheduled activities</div></div>
+    <div class="stat-card"><div class="stat-icon">✓</div><div class="label">Grades</div><div class="value">No new grades published</div></div>
+    <div class="stat-card"><div class="stat-icon">✓</div><div class="label">Exam</div><div class="value">Pre-Final is coming</div></div>
+  </div>
+
+  <section class="tuition-snapshot panel student-home-section" id="studentTuition">
+    <div>
+      <span class="eyebrow">FINANCIAL OVERVIEW</span>
+      <h2>Tuition at a glance</h2>
+      <p class="muted">Your payment progress for AY 2026-2027.</p>
+    </div>
+    <div class="tuition-snapshot-values">
+      <div><small>Total assessment</small><strong data-payment-total>₱ 8,800.00</strong></div>
+      <div><small>Paid to date</small><strong data-payment-paid>₱ 0.00</strong></div>
+      <div><small>Balance</small><strong data-payment-balance>₱ 8,800.00</strong></div>
+      <a class="btn btn-primary" href="payments.html">Open Tuition</a>
+    </div>
+  </section>
+
+  <section class="student-home-section" id="studentGrades"></section>
+  <section class="student-home-section" id="studentSchedule"></section>
+
+  <section class="panel student-home-section dashboard-announcements" id="studentAnnouncements">
+    <div class="panel-head"><div><h2>Announcements</h2><p class="muted">The latest campus notices for students.</p></div><a class="text-link" href="announcements.html">All announcements →</a></div>
+    <div class="announcement-list" data-announcements>
+      <article class="announcement-card"><div class="announcement-image"><img src="image/enroll.jpg" alt="Students completing enrollment" onerror="this.hidden=true"></div><div><h3>Enrollment for AY 2026-2027</h3><p>Enrollment is open. Confirm your requirements and complete your registration.</p><small class="muted">October 5, 2026</small></div></article>
+      <article class="announcement-card"><div class="announcement-image"><img src="image/night.jpeg" alt="CCDI College Night" onerror="this.hidden=true"></div><div><h3>CCDI College Night</h3><p>Join the campus community for an evening of performances and activities.</p><small class="muted">October 24, 2026</small></div></article>
+      <article class="announcement-card"><div class="announcement-image"><img src="image/announcement.jpeg" alt="Class suspension notice" onerror="this.hidden=true"></div><div><h3>Class suspension advisories</h3><p>Check official updates before traveling to campus during severe weather.</p><small class="muted">As announced</small></div></article>
+      <article class="announcement-card"><div class="announcement-image"><img src="image/events/intramurals.jpg" alt="CCDI intramurals" onerror="this.hidden=true"></div><div><h3>CCDI Intramurals</h3><p>Prepare for the upcoming inter-department games and activities.</p><small class="muted">November 2026</small></div></article>
+      <article class="announcement-card"><div class="announcement-image"><img src="image/billie.jpeg" alt="CCDI Fun Run" onerror="this.hidden=true"></div><div><h3>Concert with Billie Eilish & Justin Bieber</h3><p>Join us for an unforgettable evening of music and entertainment with Billie Eilish & Justin Bieber and other Local artist. </p><small class="muted">December 32, 2026</small></div></article>
+      <article class="announcement-card"><div class="announcement-image"><img src="image/events/fun-run.jpg" alt="CCDI Fun Run" onerror="this.hidden=true"></div><div><h3>CCDI Fun Run</h3><p>Registration information and route details will be posted soon.</p><small class="muted">November 2026</small></div></article>
+      
+      <article class="announcement-card"><div class="announcement-image"><img src="image/events/pre-final.jpg" alt="Pre-final examination notice" onerror="this.hidden=true"></div><div><h3>Pre-final examinations are coming</h3><p>Review your class schedule and watch for examination reminders.</p><small class="muted">December 2026</small></div></article>
+    </div>
+  </section>
+
+  <section class="panel student-home-section" id="studentEvents">
+    <div class="panel-head"><div><h2>Upcoming Events</h2><p class="muted">Campus activities and important academic dates.</p></div><a class="text-link" href="events.html">Event calendar →</a></div>
+  
+    <div class="student-event-list">
+      <article class="student-event-row"><time datetime="2026-10-05"><strong>05</strong><span>OCT</span></time><div><h3>Enrollment opens</h3><p>AY 2026-2027 registration and advising.</p></div></article>
+      <article class="student-event-row"><time datetime="2026-10-24"><strong>24</strong><span>OCT</span></time><div><h3>CCDI College Night</h3><p>Performances and student activities on campus.</p></div></article>
+      <article class="student-event-row"><time datetime="2026-11-14"><strong>14</strong><span>NOV</span></time><div><h3>CCDI Fun Run</h3><p>Community run and wellness activities.</p></div></article>
+    </div>
+  </section>
+  <section class="student-home-section" id="studentShop"></section>
+  
+    
+  
+</div>
+<template id="studentGradesPanelTemplate"><section class="page-title"><div><h2>Academic Record</h2><p class="muted"><span data-record-name>Rene Batterbonia</span> · <span data-record-course>BS Information Technology</span> · <span data-record-year>1st Year, Block A</span></p></div><a class="btn btn-outline" href="grades.html">Full grade record</a></section><div class="grade-toolbar"><div><strong>1st Semester</strong><span class="muted">AY 2026-2027</span></div><span class="badge badge-info">Current term</span></div><div class="panel"><div class="table-wrap"><table><thead><tr><th>Subject Code</th><th>Subject</th><th>Instructor</th><th>Prelim</th><th>Midterm</th><th>Pre-final</th><th>Final</th><th>Final Rating</th><th>Remarks</th></tr></thead><tbody id="dashboardStudentGradeRows"><tr><td>ITE 101</td><td>IT Fundamentals</td><td>Prof. Santos</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr><tr><td>ITE 102</td><td>Web Development</td><td>Prof. Reyes</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr><tr><td>ITE 103</td><td>Database Systems</td><td>Prof. Cruz</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr><tr><td>ITE 104</td><td>System Analysis &amp; Design</td><td>Prof. Santos</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr><tr><td>ITE 105</td><td>Computer Networks</td><td>Prof. Lim</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr><tr><td>ITE 106</td><td>Mobile App Development</td><td>Prof. Dela Cruz</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>Awaiting Release</td></tr></tbody></table></div></div></template>
+<template id="studentSchedulePanelTemplate"><section class="page-title"><div><h2 data-schedule-title>BS Information Technology · 1st Year · Block A</h2><p class="muted">1st Semester, AY 2026-2027</p></div><a class="btn btn-outline" href="schedule-all.html">See all schedules</a></section><div class="panel"><div class="table-wrap"><table><thead><tr><th>Code</th><th>Subject</th><th>Units</th><th>Time</th><th>Day</th><th>Room</th><th>Instructor</th></tr></thead><tbody id="dashboardStudentScheduleRows"></tbody></table></div></div></template>
+<template id="studentShopPanelTemplate">
+  <section class="page-title">
+    <div><h2>CCDI Shop</h2>
+      <p class="muted">Campus essentials and uniforms for students.</p>
+    </div>
+    
+  </section><div class="panel">
+    <p>Browse products, choose sizes, and submit an order in the CCDI Shop.</p>
+    <pre>  </pre>
+    <a class="btn btn-primary" href="shop.html">Open CCDI Shop</a>
+    <pre>
+       
+       
+       
+    </pre>
+  </div>
+</template>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

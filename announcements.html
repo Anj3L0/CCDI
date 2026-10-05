@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements | CCDI EDU</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="announcements" data-role="student">
+    <div id="toast" class="toast">
+    </div>
+    <section id="appPage" class="app-page">
+      <header class="app-topbar">
+        <button class="mobile-menu" onclick="toggleSidebar()">[menu]</button>
+        <a class="brand" href="dashboard-student.html">
+        <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+        <div>
+          <strong>CCDI EDU</strong>
+          <small>Computer Communication Development Institute</small>
+        </div>
+      </a>
+      <div class="top-actions">
+        <a class="btn btn-light" href="index.html">Logout</a>
+      </div>
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-role" id="sidebarRole">STUDENT</div>
+      <button class="nav-item" data-page="dashboard" onclick="showPage('dashboard')">âŒ‚ <span>Home</span>
+    </button>
+    <button class="nav-item active" data-page="announcements" onclick="showPage('announcements')">â–£ <span>Announcements</span>
+  </button>
+  <button class="nav-item" data-page="schedule" onclick="showPage('schedule')">â–¤ <span>Class Schedule</span>
+</button>
+<button class="nav-item" data-page="grades" onclick="showPage('grades')">âœ“ <span>Grades</span>
+</button>
+<button class="nav-item" data-page="payments" onclick="showPage('payments')">â‚± <span>Tuition</span>
+</button>
+<button class="nav-item" data-page="enrollment" onclick="showPage('enrollment')">â–§ <span>Online Enrollment</span>
+</button>
+<button class="nav-item" data-page="events" onclick="showPage('events')">â—· <span>Events</span>
+</button>
+<button class="nav-item" data-page="profile" onclick="showPage('profile')">â— <span>Profile</span>
+</button>
+<button class="nav-item" data-page="settings" onclick="showPage('settings')">âš™ <span>Settings</span>
+</button>
+</aside>
+<main id="appContent" class="app-content">
+</main>
+</section>
+<div class="app-content static-page-content" id="announcementsTemplate">
+  <section class="page-title"><div><h1>Announcements</h1><p>Important enrollment, campus, and academic notices.</p></div></section>
+  <div class="announcement-list announcement-feed">
+    <article class="announcement-card"><div class="announcement-image"><img src="image/events/enrollment.jpg" alt="Enrollment at CCDI" onerror="this.hidden=true"></div><div><span class="eyebrow">ENROLLMENT</span><h3>Enrollment for AY 2026-2027 is open</h3><p>Complete your enrollment requirements and confirm your course, year, and block with the registrar.</p><small class="muted">October 5, 2026</small></div></article>
+    <article class="announcement-card"><div class="announcement-image"><img src="image/events/college-night.jpg" alt="CCDI College Night" onerror="this.hidden=true"></div><div><span class="eyebrow">CAMPUS EVENT</span><h3>CCDI College Night</h3><p>Join fellow students for an evening of live performances, campus activities, and community celebration.</p><small class="muted">October 24, 2026</small></div></article>
+    <article class="announcement-card"><div class="announcement-image"><img src="image/events/class-suspension.jpg" alt="Class suspension advisory" onerror="this.hidden=true"></div><div><span class="eyebrow">ADVISORY</span><h3>Class suspension advisories</h3><p>Official class suspension announcements will be posted here. Check for updates before traveling to campus.</p><small class="muted">As announced</small></div></article>
+    <article class="announcement-card"><div class="announcement-image"><img src="image/events/intramurals.jpg" alt="CCDI Intramurals" onerror="this.hidden=true"></div><div><span class="eyebrow">STUDENT LIFE</span><h3>CCDI Intramurals</h3><p>Prepare for inter-department competitions. Registration and game schedules will be posted soon.</p><small class="muted">November 2026</small></div></article>
+    <article class="announcement-card"><div class="announcement-image"><img src="image/events/fun-run.jpg" alt="CCDI Fun Run" onerror="this.hidden=true"></div><div><span class="eyebrow">STUDENT LIFE</span><h3>CCDI Fun Run</h3><p>Join our campus community for a fun run. Route, registration, and assembly details are coming soon.</p><small class="muted">November 2026</small></div></article>
+    <article class="announcement-card"><div class="announcement-image"><img src="image/events/pre-final.jpg" alt="Pre-final examination reminder" onerror="this.hidden=true"></div><div><span class="eyebrow">ACADEMIC REMINDER</span><h3>Pre-final examinations are coming</h3><p>Review your class schedule and coordinate with instructors for subject-specific exam reminders.</p><small class="muted">December 2026</small></div></article>
+  </div>
+</div>
+<script src="script.js">
+</script>
+</body>
+</html>
+

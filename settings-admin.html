@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Settings | CCDI EDU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="settings" data-role="admin">
+  <div id="toast" class="toast"></div>
+  <section id="appPage" class="app-page">
+    <header class="app-topbar"><button class="mobile-menu" onclick="toggleSidebar()" aria-label="Open navigation">☰</button><a class="brand" href="dashboard-admin.html"><img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU"><div><strong>CCDI EDU</strong><small>Computer Communication Development Institute</small></div></a><a class="profile-btn" href="profile.html" aria-label="Open profile"><span class="avatar">AD</span></a></header>
+    <aside id="sidebar" class="sidebar"><div class="sidebar-role">ADMIN / STAFF</div><a class="nav-item" data-page="dashboard"><span>Home</span></a><a class="nav-item" data-page="announcements"><span>Announcements</span></a><a class="nav-item" data-page="events"><span>Events</span></a><a class="nav-item" data-page="users"><span>Users</span></a><a class="nav-item" data-page="academics-admin"><span>Academics</span></a><a class="nav-item" data-page="finance"><span>Finance</span></a><a class="nav-item" data-page="reports"><span>Reports</span></a><a class="nav-item" data-page="settings"><span>Settings</span></a></aside>
+    <main id="appContent" class="app-content"></main>
+  </section>
+  <div class="app-content static-page-content" id="settingsTemplate"><section class="page-title"><div><h1>Admin Settings</h1><p>Manage school portal preferences.</p></div></section><div class="panel"><div class="form-grid"><div class="form-group"><label for="adminEmailNotifications">Email notifications</label><select id="adminEmailNotifications"><option>Enabled</option><option>Disabled</option></select></div><div class="form-group"><label for="themeSelect">Theme</label><select id="themeSelect"><option value="light">CCDI Blue / Light</option><option value="dark">Dark</option></select></div><div class="form-group"><label for="maintenanceNotice">Maintenance notices</label><select id="maintenanceNotice"><option>Enabled</option><option>Disabled</option></select></div></div><button class="btn btn-primary" style="margin-top:20px" onclick="saveSettings()">Save Settings</button></div></div>
+  <script src="script.js" defer></script>
+</body>
+</html>

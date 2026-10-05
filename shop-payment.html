@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Checkout | CCDI EDU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="shop-payment" data-role="student">
+  <div id="toast" class="toast"></div>
+  <section id="appPage" class="app-page">
+    <header class="app-topbar"><button class="mobile-menu" onclick="toggleSidebar()" aria-label="Open navigation">☰</button><a class="brand" href="dashboard-student.html"><img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU"><div><strong>CCDI EDU</strong><small>Computer Communication Development Institute</small></div></a><a class="profile-btn student-avatar-link" href="profile.html" aria-label="Open profile"><span class="avatar">RB</span></a></header>
+    <aside id="sidebar" class="sidebar"><div class="sidebar-role">STUDENT</div><a class="nav-item" data-page="dashboard"><span>Home</span></a><a class="nav-item" data-page="payments"><span>Tuition</span></a><a class="nav-item" data-page="announcements"><span>Announcements</span></a><a class="nav-item" data-page="events"><span>Events</span></a><a class="nav-item" data-page="grades"><span>Grades</span></a><a class="nav-item" data-page="schedule"><span>Class Schedule</span></a><a class="nav-item active" data-page="shop"><span>CCDI Shop</span></a><a class="nav-item" data-page="settings"><span>Settings</span></a></aside>
+    <main class="app-content"><section class="page-title"><div><h1>Shop Checkout</h1><p>Review your order and payment history.</p></div><a class="btn btn-outline" href="shop.html">Continue shopping</a></section><div class="dashboard-grid shop-checkout-grid"><section class="panel"><div class="panel-head"><h2>Your order</h2></div><div id="shopCheckoutItems" class="shop-checkout-items"></div><div class="checkout-total"><span>Total</span><strong id="shopCheckoutTotal">₱ 0.00</strong></div><label class="form-group">Payment method<select id="shopPaymentMethod"><option>GCash</option><option>Bank transfer</option><option>Card</option><option>Cashier</option></select></label><p class="muted">Demo only. No real payment is processed.</p><button class="btn btn-primary" id="completeShopPayment" type="button">Pay and place order</button></section><section class="panel"><div class="panel-head"><h2>Order history</h2></div><div class="table-wrap"><table><thead><tr><th>Order</th><th>Date</th><th>Total</th><th>Receipt</th></tr></thead><tbody id="shopOrderHistory"></tbody></table></div></section></div></main>
+  </section>
+  <script src="script.js" defer></script>
+</body>
+</html>

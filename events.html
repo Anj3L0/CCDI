@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | CCDI EDU</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="events" data-role="student">
+    <div id="toast" class="toast">
+    </div>
+    <section id="appPage" class="app-page">
+      <header class="app-topbar">
+        <button class="mobile-menu" onclick="toggleSidebar()">[menu]</button>
+        <a class="brand" href="dashboard-student.html">
+        <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+        <div>
+          <strong>CCD<span class="brand-accent">i</span> EDU</strong>
+          <small>Computer Communication Development Institute</small>
+        </div>
+      </a>
+      <a class="btn btn-light" href="index.html">Logout</a>
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-role" id="sidebarRole">STUDENT</div>
+      <button class="nav-item" data-page="dashboard" onclick="showPage('dashboard')">âŒ‚ <span>Home</span>
+    </button>
+    <button class="nav-item" data-page="announcements" onclick="showPage('announcements')">â–£ <span>Announcements</span>
+  </button>
+  <button class="nav-item" data-page="schedule" onclick="showPage('schedule')">â–¤ <span>Class Schedule</span>
+</button>
+<button class="nav-item" data-page="grades" onclick="showPage('grades')">âœ“ <span>Grades</span>
+</button>
+<button class="nav-item" data-page="payments" onclick="showPage('payments')">â‚± <span>Tuition</span>
+</button>
+<button class="nav-item active" data-page="events" onclick="showPage('events')">â—· <span>Events</span>
+</button>
+<button class="nav-item" data-page="profile" onclick="showPage('profile')">â— <span>Profile</span>
+</button>
+<button class="nav-item" data-page="settings" onclick="showPage('settings')">âš™ <span>Settings</span>
+</button>
+</aside>
+<main id="appContent" class="app-content">
+</main>
+</section>
+<div class="app-content static-page-content" id="eventsTemplate">
+  <section class="page-title"><div><h1>Events</h1><p>Upcoming activities and important academic dates.</p></div></section>
+  <div id="eventResults" class="event-list event-feed">
+    <article class="event-card"><img class="event-photo" src="image/events/enrollment.jpg" alt="Enrollment" onerror="this.hidden=true"><time class="event-date" datetime="2026-10-05"><strong>05</strong><small>OCT</small></time><div class="event-copy"><span class="eyebrow">ACADEMIC</span><h3>Start of Enrollment</h3><p>Enrollment opens for AY 2026-2027. Visit the registrar for requirements and advising.</p><small class="muted">October 5, 2026 · Registrar's Office</small></div></article>
+    <article class="event-card"><img class="event-photo" src="image/events/college-night.jpg" alt="CCDI College Night" onerror="this.hidden=true"><time class="event-date" datetime="2026-10-24"><strong>24</strong><small>OCT</small></time><div class="event-copy"><span class="eyebrow">CAMPUS EVENT</span><h3>CCDI College Night</h3><p>Performances, student showcases, and an evening celebration for the campus community.</p><small class="muted">October 24, 2026 · 5:00 PM</small></div></article>
+    <article class="event-card"><img class="event-photo" src="image/events/intramurals.jpg" alt="CCDI Intramurals" onerror="this.hidden=true"><time class="event-date" datetime="2026-11-09"><strong>09</strong><small>NOV</small></time><div class="event-copy"><span class="eyebrow">STUDENT LIFE</span><h3>CCDI Intramurals</h3><p>Department teams compete in campus sports and recreation activities.</p><small class="muted">November 9, 2026 · 8:00 AM</small></div></article>
+    <article class="event-card"><img class="event-photo" src="image/events/fun-run.jpg" alt="CCDI Fun Run" onerror="this.hidden=true"><time class="event-date" datetime="2026-11-14"><strong>14</strong><small>NOV</small></time><div class="event-copy"><span class="eyebrow">STUDENT LIFE</span><h3>CCDI Fun Run</h3><p>A community run and wellness activity open to students and staff.</p><small class="muted">November 14, 2026 · 6:00 AM</small></div></article>
+    <article class="event-card"><img class="event-photo" src="image/events/pre-final.jpg" alt="Pre-final examination" onerror="this.hidden=true"><time class="event-date" datetime="2026-12-07"><strong>07</strong><small>DEC</small></time><div class="event-copy"><span class="eyebrow">ACADEMIC</span><h3>Pre-final Examination Period</h3><p>Pre-final examinations begin. Check your official class schedule for room and time details.</p><small class="muted">December 7-12, 2026 · Class schedules vary</small></div></article>
+    <article class="event-card"><img class="event-photo" src="image/events/class-suspension.jpg" alt="Class suspension advisory" onerror="this.hidden=true"><time class="event-date" datetime="2026-10-02"><strong>LIVE</strong><small>NOTICE</small></time><div class="event-copy"><span class="eyebrow">ADVISORY</span><h3>Class Suspension Notices</h3><p>Check official notices for weather-related class suspensions and campus advisories.</p><small class="muted">Updated when announced</small></div></article>
+  </div>
+</div>
+  <script src="script.js" defer></script>
+</body>
+</html>
+

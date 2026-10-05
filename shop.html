@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCDI Shop | CCDI EDU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="shop" data-role="student">
+  <div id="toast" class="toast"></div>
+  <section id="appPage" class="app-page">
+    <header class="app-topbar">
+      <button class="mobile-menu" onclick="toggleSidebar()">☰</button>
+      <a class="brand" href="dashboard-student.html">
+        <img class="brand-logo" src="image/CCDI EDU.png" alt="CCDI EDU">
+        <div>
+          <strong>CCD<span class="brand-accent">i</span> EDU</strong>
+          <small>Computer Communication Development Institute</small>
+        </div>
+      </a>
+      <a class="btn btn-light" href="index.html">Logout</a>
+    </header>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-role" id="sidebarRole">STUDENT</div>
+      <button class="nav-item" data-page="dashboard" onclick="showPage('dashboard')">⌂ <span>Home</span></button>
+      <button class="nav-item" data-page="announcements" onclick="showPage('announcements')">▣ <span>Announcements</span></button>
+      <button class="nav-item" data-page="schedule" onclick="showPage('schedule')">▤ <span>Class Schedule</span></button>
+      <button class="nav-item" data-page="grades" onclick="showPage('grades')">✓ <span>Grades</span></button>
+      <button class="nav-item" data-page="payments" onclick="showPage('payments')">₱ <span>Tuition</span></button>
+      <button class="nav-item active" data-page="shop" onclick="showPage('shop')">▣ <span>CCDI Shop</span></button>
+      <button class="nav-item" data-page="events" onclick="showPage('events')">◷ <span>Events</span></button>
+      <button class="nav-item" data-page="profile" onclick="showPage('profile')">● <span>Profile</span></button>
+      <button class="nav-item" data-page="settings" onclick="showPage('settings')">⚙ <span>Settings</span></button>
+    </aside>
+    <main id="appContent" class="app-content"></main>
+  </section>
+  <div class="app-content static-page-content" id="shopTemplate">
+    <section class="shop-page"><div class="shop-page-header"><div><span class="eyebrow">CCDI SHOP</span><h1>Uniforms and student essentials</h1><p class="muted">Select an item and size, then complete a campus pickup order.</p></div><a class="btn btn-primary" href="shop-payment.html">Cart and payment <span class="shop-cart-count">0</span></a></div><section class="shop-section"><div class="shop-heading"><div><span class="eyebrow">CCDI SHOP</span><h2>Official school items</h2><p class="muted">Product image files can be replaced in each item's image src.</p></div></div><div class="shop-grid">
+      <article class="shop-item" data-product="mens-uniform" data-price="1250"><img class="product-photo" src="image/billie.jpeg" alt="Men's school uniform" onerror="this.hidden=true"><h3>School Uniform for Men</h3><p>Men's campus uniform set.</p><label class="size-field">Size<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><strong>₱ 1,250.00</strong><button class="btn btn-outline" type="button" data-add-product>Add to cart</button></article>
+      <article class="shop-item" data-product="womens-uniform-a" data-price="1250"><img class="product-photo" src="image/billie.jpeg" alt="Women's school uniform Type A" onerror="this.hidden=true"><h3>School Uniform for Women · Type A</h3><p>Women's campus uniform, Type A.</p><label class="size-field">Size<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><strong>₱ 1,250.00</strong><button class="btn btn-outline" type="button" data-add-product>Add to cart</button></article>
+      <article class="shop-item" data-product="womens-uniform-b" data-price="1250"><img class="product-photo" src="image/products/school-uniform-women-b.jpg" alt="Women's school uniform Type B" onerror="this.hidden=true"><h3>School Uniform for Women · Type B</h3><p>Women's campus uniform, Type B.</p><label class="size-field">Size<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><strong>₱ 1,250.00</strong><button class="btn btn-outline" type="button" data-add-product>Add to cart</button></article>
+      <article class="shop-item" data-product="bsoa-uniform" data-price="950"><img class="product-photo" src="image/products/bsoa-uniform.jpg" alt="BSOA department uniform" onerror="this.hidden=true"><h3>BSOA Department Uniform</h3><p>Business Office Administration department uniform.</p><label class="size-field">Size<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><strong>₱ 950.00</strong><button class="btn btn-outline" type="button" data-add-product>Add to cart</button></article>
+      <article class="shop-item" data-product="bscs-uniform" data-price="950"><img class="product-photo" src="image/products/bscs-uniform.jpg" alt="BSCS department uniform" onerror="this.hidden=true"><h3>BSCS Department Uniform</h3><p>Computer Science department uniform.</p><label class="size-field">Size<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><strong>₱ 950.00</strong><button class="btn btn-outline" type="button" data-add-product>Add to cart</button></article>
+      <article class="shop-item" data-product="bsis-uniform" data-price="950"><img class="product-photo" src="image/products/bsis-uniform.jpg" alt="BSIS department uniform" onerror="this.hidden=true"><h3>BSIS Department Uniform</h3><p>Information Systems department uniform.</p><label class="size-field">Size<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><strong>₱ 950.00</strong><button class="btn btn-outline" type="button" data-add-product>Add to cart</button></article>
+      <article class="shop-item" data-product="act-uniform" data-price="950"><img class="product-photo" src="image/products/act-uniform.jpg" alt="P.E uniform" onerror="this.hidden=true"><h3>P.E Uniform</h3><p>Associate in Computer Technology department uniform.</p><label class="size-field">Size<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></label><strong>₱ 950.00</strong><button class="btn btn-outline" type="button" data-add-product>Add to cart</button></article>
+      <article class="shop-item" data-product="school-id" data-price="180"><img class="product-photo" src="image/products/school-id.jpg" alt="CCDI student ID" onerror="this.hidden=true"><h3>School ID</h3><p>Student ID generated from enrollment information.</p><strong>₱ 180.00</strong><button class="btn btn-outline" type="button" data-add-product>Add to cart</button></article>
+    </div><div class="shop-cart"><strong>Current cart</strong><span data-shop-cart-summary>Your cart is empty.</span><a class="btn btn-primary" href="shop-payment.html">Continue to payment</a></div></section></section>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
