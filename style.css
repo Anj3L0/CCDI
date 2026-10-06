@@ -204,11 +204,11 @@ a {
 }
 
 .public-nav nav a:hover {
-  color: #07539a;
+  color: #f700f7;
 }
 
 .public-nav nav a.is-current {
-  color: #07539a;
+  color: #f700f7;
 }
 
 .public-content {
